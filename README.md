@@ -3,7 +3,8 @@
 ## Description
 
 -A webshop for pajamas, designed to provide a seamless shopping experience for customers looking for comfortable and stylish pajamas.
--one of the things i did only after 6 weeks of beginning my website development journey. Give me any task and i willadapt fast
+
+-one of the things i did only after 6 weeks of beginning my website development journey. Give me any task and i will adapt fast
 
 ## TABLE of content
 
