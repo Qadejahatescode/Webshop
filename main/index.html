@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./validate.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cartpg.css">
+    <link rel="stylesheet" href="./css/checkout.css">
+    <link rel="stylesheet" href="./css/colpg.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/homepg.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/searchpg.css">
+    <link rel="stylesheet" href="./css/order.css">
+</head>
+
+<body>
+    <!-- Header -->
+<div id="mainHeader">
+        <div>
+            <div id="searchBox">
+                <button type="submit" onclick="fetchUserSearch()">search</button>
+                <input type="text" id="search">
+            </div>
+            <div id="cartImgContainer">
+                <button onclick="showSection('Cartpg')"><img src="./images/cart.png" alt=""></button>
+            </div>
+            <div id="login" >
+                <button onclick="showSection('Loginpg')" id="loginbutton">Log In or Sign Up</button>
+            </div>
+         
+        </div>
+        <h1 id="mainTitle">Queenie'S</h1>
+        <div id="navBar">
+            <ul>
+                <button onclick="showSection('Homepg')">Home</button>
+                <button onclick="showSection('Colpg')">Collections</button>
+            </ul>
+        </div>
+</div>
+    <!-- Homepg -->
+<div id="Homepg">
+        <div id="mainBox1">
+            <div class="mainText">
+                <div id="innerText">
+                    <h1>Sleep like a Queen</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni eos ipsum consequuntur. Eveniet
+                        esse nisi similique, provident exercitatione.</p>
+                    <h3>Prices start at $30</h3>
+                    <p>Shop Now</p>
+                </div>
+            </div>
+            <img src="./images/pajama1.jpg" alt="">
+        </div>
+</div>
+   
+<!-- Collections -->
+<div id="Colpg">
+            <div id="category1" class="category">
+                <button onclick="fetchCategories(1)">
+                    <img src="./images/pajama4.jpg" alt="">
+                    <div class="catText">
+                        <h1>Patterns</h1>
+                    </div>
+                </button>
+
+            </div>
+            <div id="category2" class="category">
+                <button onclick="fetchCategories(2)">
+                    <img src="./images/pajama1.jpg" alt="">
+                    <div class="catText">
+                        <h1>Satin</h1>
+                    </div>
+                </button>
+            </div>
+            <div id="category3" class="category">
+                <button onclick="fetchCategories(3)">
+                    <img src="./images/pajama3.jpg" alt="">
+                    <div class="catText">
+                        <h1>Plain</h1>
+                    </div>
+                </button>
+            </div>
+            <div id="category4" class="category">
+                <button onclick="fetchCategories(4)">
+                    <img src="./images/pajama6.jpg" alt="">
+                    <div class="catText">
+                        <h1>Summer</h1>
+                    </div>
+                </button>
+            </div>
+            <div id="category5" class="category">
+                <button onclick="fetchCategories(5)">
+                    <img src="./images/pajama7.jpg" alt="">
+                    <div class="catText">
+                        <h1>Winter</h1>
+                    </div>
+                </button>
+            </div>
+            <div id="category6" class="category">
+                <button onclick="fetchCategories(6)">
+                    <img src="./images/pajama2.jpg" alt="">
+                    <div class="catText">
+                        <h1>Long Sleeve Long Pants</h1>
+                    </div>
+                </button>
+            </div>
+            <div id="category7" class="category">
+                <button onclick="fetchCategories(7)">
+                    <img src="./images/pajama5.jpg" alt="">
+                    <div class="catText">
+                        <h1>Short Sleeve Short Pants</h1>
+                    </div>
+                </button>
+            </div>
+</div>
+<!-- Search -->
+ <div id="Searchpg">
+    <div id="searchContainer"></div>
+ </div>
+
+<!-- cart -->
+<div id="Cartpg">
+            <div id="yourCart">
+                <h1>Your Cart</h1>
+            </div>
+            <div id="cartBar">
+                <p>Product</p>
+        <p>Total</p>
+        <p>Quantity</p>
+    </div>
+    <div id="cartContainer">
+
+    </div>
+    <div id="hiddenCart">
+        <p>Subtotal :</p><div id="subtotal"></div>
+        <div><button onclick="showSection('Checkoutpg')">Proceed to checkout</button></div>
+    </div>
+    
+</div>
+<!-- Checkout -->
+<div id="Checkoutpg">
+    <div class="checkout-container">
+        <!-- Cart Summary Section -->
+        <div class="cart-summary">
+            <h2>Order Summary</h2>
+            <div class="cart-item">
+                <div class="item-details">
+                     <div class="summary-total">
+                        <p>Subtotal: <span id="subCheckout"></span></p>
+                        <p>Shipping: $5.00</p>
+                        <p>Total: <span id="totalCheckout"></span></p>
+                    </div>
+               </div>
+            </div>
+         </div>
+
+        <!-- Billing and Shipping Information Section -->
+        <div class="billing-shipping">
+            <h2>Billing & Shipping Information</h2>
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" id="firstname" >
+            </div>
+            <div class="form-group">
+                <label >Last Name</label>
+                <input type="text" id="lastname">
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="text" id="phone_number">
+            </div>
+
+          
+            <div class="form-group">
+                <label>Address line 1</label>
+                <input type="text" id="address1">
+            </div>
+            <div class="form-group">
+                <label>Address line 2</label>
+                <input type="text" id="address2">
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            <div class="form-group">
+                <label >Postal Code</label>
+                <input type="text" id="postal_code">
+            </div>
+            <div class="form-group">
+                <label>Country</label>
+                <input type="text" id="country">
+            </div>
+           
+           <p id="checkouterror"></p>
+        </div>
+    
+        <!-- Payment Information Section -->
+        <div id="radioContainer">
+            <h1>Payment Options</h1>
+            <div class="container">
+                <h2>Payment Information</h2>
+                    <div class="form-group">
+                       <div id="radio">
+                        <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" required>
+                        <label for="creditCard">Credit/Debit Card</label>
+    
+                        <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                        <label for="paypal">PayPal</label>
+                        
+                        <input type="radio" id="applePay" name="paymentMethod" value="applePay">
+                        <label for="applePay">Apple Pay</label>
+                        
+                        <input type="radio" id="googlePay" name="paymentMethod" value="googlePay">
+                        <label for="googlePay">Google Pay</label>
+                    </div>
+                    </div>
+                <button onclick="handleCheckout()">Submit</button>
+            </div>
+        </div>
+    </div>
+     </div>
+<!-- productpg -->
+<div id="categories">
+</div>
+<div id="expandedPg"></div>
+ <!-- Login -->
+<div id="Loginpg">
+        <div class="login-container" id="log">
+            <h1>Welcome Back!</h1>
+           <div class="account">
+                <input type="text" id="username" name="username" placeholder="Username" >
+                <input type="password" id="password" name="password" placeholder="Password" >
+                <p id="loginerror"></p>
+                <button type="submit" onclick="submitLogin()">Log In</button>
+           </div>
+           <a href="#" onclick="forgotPassword()">Forgot Password</a>
+            <p>Don't have an account? <a href="#" onclick="switchToSignUp()">Sign Up</a></p>
+        </div>
+        
+        <!-- Sign-Up Form -->
+        <div class="login-container" id="signUp" >
+            <h1>Create an Account</h1>
+              <div class="account">
+                <input type="text" id="newUsername" name="newUsername" placeholder="Username">
+                <input type="email" id="email" name="email" placeholder="Email" >
+                <input type="password" id="newPassword" name="newPassword" placeholder="Password" >
+                <input type="text" id="newPhone" name="newPhone" placeholder="Phone Number">
+                <p id="signuperror"></p>
+                <button type="submit" onclick="submitSignUp()">Sign Up</button>
+              </div>
+            <p>Already have an account? <a href="#" onclick="switchToLogin()">Log In</a></p>
+        </div>
+        <div class="login-container" id="forgot">
+            <div class="account">
+                <p>What is your phone number?</p>
+            <input type="text" id="phoneRecall">
+            <p>Enter new password</p>
+            <input type="text" id="replacedPassword">
+            <p id="forgoterror"></p>
+            <button onclick="submitNewPassword()">Submit</button>
+            </div>
+        </div>
+</div>
+<!-- Order Sucess -->
+<div id="Orderpg">
+    <div class="order-successful">
+        <h1>Thank You for Your Order!</h1>
+        <p>Your order has been successfully placed.</p>
+        <p>Order ID: <span id="orderId">#123456</span></p>
+        <p>We have sent the details to your provided contact.</p>
+    
+        <div class="order-actions">
+            <button class="btn" id="receipt" onclick="generateReceipt()">See Order Details</button>
+            <button class="btn" onclick="showSection('Homepg')">Shop More</button>
+        </div>
+    </div>
+</div>
+<!-- JavaScript Code -->
+
+<script src="./index.js"></script>
+<script src="showSection.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+#Homepg {
+    margin: 10px;
+}
+
+#mainBox1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 70vh;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#mainBox1 img {
+    width: 50%;
+    height: 100%;
+}
+
+.mainText {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+#innerText {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    text-align: left;
+}

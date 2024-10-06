@@ -1,0 +1,16 @@
+/* General Styles */
+body {
+    background-color:lightcoral;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+/* Display */
+
+#Colpg,#signUp,#Loginpg,#Cartpg,#expandedPg,#Checkoutpg,#hiddenCart,#forgot,#Orderpg,#categories{
+    display: none;
+}
+
+

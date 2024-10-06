@@ -1,0 +1,97 @@
+/* Header */
+#mainHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#searchBox,
+#login {
+    width: auto;
+}
+
+#searchBox {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#searchBox input {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 200px;
+}
+#searchBox button{
+    background-color: lightcoral;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: floralwhite;
+}
+
+
+#login {
+    display: flex;
+    align-items: center;
+
+}
+
+#loginbutton {
+   
+    background-color: white;
+    color: lightcoral;
+    border: 1px solid lightcoral;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#login button:hover{
+    background-color: lightcoral;
+    color: white;
+}
+
+#mainTitle {
+    color: aliceblue;
+}
+
+
+#navBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#navBar ul {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-direction: row;
+}
+
+#navBar button {
+    text-decoration: none;
+    color: aliceblue;
+    border: none;
+    background-color: lightcoral;
+}
+
+#mainHeader>div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,6 @@
+#searchContainer{
+    grid-template-columns: auto auto auto auto;
+}
+#Searchpg{
+    width: 100vw;
+}

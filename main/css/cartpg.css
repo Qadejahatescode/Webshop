@@ -1,0 +1,135 @@
+/* cart button */
+#cartImgContainer{
+    margin-left: 500px;
+}
+#cartImgContainer img {
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    object-fit: cover;
+}
+
+/* Cart Image Button */
+#cartImgContainer button {
+    width: 80px;
+    height: 80px;
+    border: none;
+    background-color: #f08080;
+    /* Light coral */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#cartImgContainer button:hover {
+    background-color: rgb(243, 41, 82);
+    /* Slightly darker light coral on hover */
+}
+
+/* Cart Page Header */
+#yourCart {
+    background-color:crimson;
+    color: #f08080;
+    /* Light coral */
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    width: 100vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Cart Container */
+#cartContainer {
+     
+    display: flex;
+    flex-direction: column;
+   
+    /* White background */
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    padding: 20px;
+    /* Added padding for spacing */
+}
+
+/* Cart Details */
+.cart-details {
+    display: flex;
+    flex-direction: row;
+    background-color: #f08080;
+    /* Light coral background */
+    height: auto;
+    /* Adjust height to content */
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid crimson;
+    /* Crimson border */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 10px;
+    /* Added padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+/* Cart Image */
+.cart-image {
+    margin: 10px;
+    width: 150px;
+    /* Adjusted size */
+    height: 150px;
+    /* Adjusted size */
+    border-radius: 8px;
+    /* Rounded corners */
+    border: 2px solid crimson;
+    /* Crimson border */
+    object-fit: cover;
+    /* Maintain aspect ratio */
+}
+
+/* Cart Bar */
+#cartBar {
+    background-color: rgb(241, 63, 98);
+    /* Crimson background */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px;
+    /* Added padding */
+    border-radius: 8px;
+    /* Rounded corners */
+    margin: 10px 0;
+    color: floralwhite;
+    /* Margin for spacing */
+}
+
+/* Subtotal */
+#subtotal {
+    color: white;
+    /* Text color */
+    font-size: 20px;
+    /* Font size */
+    margin-top: 12px;
+    
+}
+#hiddenCart{
+   flex-direction: row;
+   justify-content: center;
+}
+#hiddenCart button{
+   margin-left: 50px;
+    color: floralwhite;
+    border:none;
+    background-color: crimson;
+    padding: 5px;
+    font-size: 18px;
+
+}

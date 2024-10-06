@@ -1,0 +1,37 @@
+#Orderpg {
+    text-align: center;
+    color: white;
+    /* White text color */
+    background-color: crimson;
+    /* Optional dark background for contrast */
+    padding: 20px;
+}
+
+.order-successful h1,
+.order-successful p,
+.order-successful h2{
+    color: white;
+    /* White text for headings and paragraphs */
+}
+
+.order-actions .btn {
+    background-color: white;
+    /* White background for buttons */
+    color: pink;
+    /* Pink font for buttons */
+    border: 2px solid pink;
+    /* Optional pink border */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 10px;
+    /* Add space between buttons */
+}
+
+.order-actions .btn:hover {
+    background-color: pink;
+    /* Pink background on hover */
+    color: white;
+    /* White font on hover */
+}
